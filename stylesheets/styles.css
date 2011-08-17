@@ -5,8 +5,8 @@ AUTHOR: Matthew Anderson => http://matthew-anderson.net
 */
 
 body {
-  background: url("http://placehold.it/200");
-  color: #444;
+  background: #111;
+  color: #fff;
   font: normal 16px/20px 'Helvetica Neue', sans-serif;
 }
 
@@ -16,28 +16,9 @@ a {
 
 /* =LAYOUT */
 
-html, body { height: 100%; }
-
-aside {
-  bottom: 0;
-  display: table;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 190px;
-}
-
 nav {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-nav div {
-  background: rgba(0, 0, 0, .05);
-  border: 3px solid rgba(0, 0, 0, .1);
-  border-left: 0;
-  padding: 20px 0;
+  margin: 0 auto;
+  width: 960px;
 }
 
 nav ul {
@@ -45,23 +26,17 @@ nav ul {
 }
 
 section {
-  background: #fff;
-  bottom: 0;
-  position: absolute;
-  left: 200px;
-  top: 0;
-  width: 800px;
+  margin: 0 auto;
+  width: 960px;
 }
 
 /* =LOGO */
 
 h1 a {
-  background: url("../images/logo.png") 50% no-repeat;
+/*  background: url("../images/logo.png") 50% no-repeat;*/
   display: block;
   height: 100px;
   margin: 0 auto;
   opacity: .6;
   width: 100px;
 }
-
-h1 span { display: none; }
