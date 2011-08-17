@@ -5,7 +5,7 @@ AUTHOR: Matthew Anderson => http://matthew-anderson.net
 */
 
 body {
-  background: #111;
+  background: #111 url("../images/bg.png");
   color: #fff;
   font: normal 16px/20px 'Helvetica Neue', sans-serif;
 }
