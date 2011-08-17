@@ -30,6 +30,13 @@ section {
   width: 960px;
 }
 
+article {
+  float: left;
+  margin: 10px;
+  text-align: justify;
+  width: 220px;
+}
+
 /* =LOGO */
 
 h1 a {
