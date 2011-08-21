@@ -7,7 +7,7 @@ AUTHOR: Matthew Anderson => http://matthew-anderson.net
 body {
   background: #111 url("../images/bg.png");
   color: #fff;
-  font: normal 16px/20px 'Helvetica Neue', sans-serif;
+  font: normal 13px/20px 'Helvetica Neue', sans-serif;
 }
 
 a {
@@ -17,8 +17,12 @@ a {
 /* =LAYOUT */
 
 nav {
+  background: rgba(255, 255, 255, .2);
+  height: 100px;
   margin: 0 auto;
-  width: 960px;
+  left: 0;
+  position: fixed;
+  right: 0;
 }
 
 nav ul {
@@ -27,15 +31,26 @@ nav ul {
 
 section {
   margin: 0 auto;
+  padding-top: 110px;
   width: 960px;
 }
 
-article {
+section li {
   float: left;
-  margin: 10px;
+  margin: 3px;
   text-align: justify;
-  width: 220px;
+  width: 234px;
 }
+
+section li.photo { width: 474px; }
+
+article {
+  background: rgba(255, 255, 255, .1);
+  min-height: 200px;
+  padding: 10px;
+}
+
+.photo article { min-height: 400px; }
 
 /* =LOGO */
 
