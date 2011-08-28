@@ -4,61 +4,107 @@ DESCRIPTION: This stylesheet serves global declarations to Student Driver
 AUTHOR: Matthew Anderson => http://matthew-anderson.net
 */
 
+/* =FLOATS */
+
+section ul:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+}
+
+/* =BASE */
+
 body {
   background: #111 url("../images/bg.png");
   color: #fff;
   font: normal 13px/20px 'Helvetica Neue', sans-serif;
+  text-align: center;
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 /* =LAYOUT */
 
 nav {
-  background: rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .9);
   height: 100px;
   margin: 0 auto;
-  left: 0;
-  position: fixed;
-  right: 0;
 }
 
 nav ul {
+  display: none;
   padding: 10px;
+}
+
+aside {
+  background: rgba(255, 255, 255, .7);
+  padding: 10px 0;
 }
 
 section {
   margin: 0 auto;
-  padding-top: 110px;
-  width: 960px;
+  padding: 3px 0;
+  text-align: center;
+  max-width: 320px;
 }
 
 section li {
   float: left;
   margin: 3px;
   text-align: justify;
-  width: 234px;
+  width: 314px;
 }
-
-section li.photo { width: 474px; }
 
 article {
   background: rgba(255, 255, 255, .1);
-  min-height: 200px;
+  height: 128px;
   padding: 10px;
 }
 
-.photo article { min-height: 400px; }
+.photo article { padding: 0; }
+
+.photo img {
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+}
 
 /* =LOGO */
 
 h1 a {
-/*  background: url("../images/logo.png") 50% no-repeat;*/
   display: block;
   height: 100px;
   margin: 0 auto;
   opacity: .6;
   width: 100px;
 }
+
+/* =LAYOUTS */
+
+@media (min-width: 726px) {
+  nav, aside {
+    left: 0;
+    position: fixed;
+    right: 0;
+  }
+  nav { top: 0; }
+  aside { bottom: 0; }
+  section {
+    padding: 103px 0 43px 0;
+    max-width: 720px;
+    position: relative;
+    z-index: -1;
+  }
+  section li { width: 234px; }
+  .photo { width: 474px; }
+  .photo article { height: 302px; }
+}
+
+@media (min-width: 966px) { section { max-width: 960px;} }
+@media (min-width: 1206px) { section { max-width: 1200px;} }
+@media (min-width: 1446px) { section { max-width: 1440px;} }
