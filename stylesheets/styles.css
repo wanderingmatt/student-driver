@@ -1,4 +1,4 @@
-/* 
+/*
 FILENAME: styles.css
 DESCRIPTION: This stylesheet serves global declarations to Student Driver
 AUTHOR: Matthew Anderson => http://matthew-anderson.net
@@ -62,15 +62,17 @@ section li {
 
 article {
   background: rgba(255, 255, 255, .1);
-  height: 128px;
+  height: 108px;
   padding: 10px;
 }
 
-.photo article { padding: 0; }
+.media article {
+  overflow: hidden;
+  padding: 0;
+}
 
-.photo img {
+.media img {
   display: block;
-  max-height: 100%;
   max-width: 100%;
 }
 
@@ -102,7 +104,9 @@ h1 a {
   }
   section li { width: 234px; }
   .photo { width: 474px; }
-  .photo article { height: 302px; }
+  .video { width: 714px; }
+  .photo article { height: 262px; }
+  .video article { height: 396px; }
 }
 
 @media (min-width: 966px) { section { max-width: 960px;} }
