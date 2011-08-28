@@ -108,3 +108,26 @@ h1 a {
 @media (min-width: 966px) { section { max-width: 960px;} }
 @media (min-width: 1206px) { section { max-width: 1200px;} }
 @media (min-width: 1446px) { section { max-width: 1440px;} }
+
+/* =TRANSITIONS */
+
+.masonry, .masonry .masonry-brick {
+  -moz-transition-duration: 0.25s;
+  -o-transition-duration: 0.25s;
+  -webkit-transition-duration: 0.25s;
+  transition-duration: 0.25s;
+}
+
+.masonry {
+  -moz-transition-property: height, width;
+  -o-transition-property: height, width;
+  -webkit-transition-property: height, width;
+  transition-property: height, width;
+}
+
+.masonry .masonry-brick {
+  -moz-transition-property: left, right, top;
+  -o-transition-property: left, right, top;
+  -webkit-transition-property: left, right, top;
+  transition-property: left, right, top;
+}
