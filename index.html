@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
   <title>Student Driver</title>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <link rel="stylesheet" type="text/css" href="stylesheets/reset.min.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/styles.css" />
@@ -19,6 +19,7 @@
   <aside>
     <h2>Our next event is ?</h2>
   </aside>
+  
   <section>
     <ul>
       <li>
@@ -121,19 +122,38 @@
           <p>Fap hoodie +1 etsy beard keffiyeh. DIY portland Austin, yr raw denim +1 wolf banh mi mixtape photo booth biodiesel trust fund lo-fi gluten-free.</p>
         </article>
       </li>
-    </ul>
+    </ul>    
   </section>
-</body>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="javascripts/jquery.masonry.min.js"></script>
+  
+  <script src="javascripts/jquery-1.6.2.min.js"></script>
 
-<script>
-  $(function(){
-    $('section ul').masonry({
-      itemSelector: 'section ul li',
-      columnWidth: 240,
-      isFitWidth: true
+  <script src="javascripts/jquery.masonry.min.js"></script>
+  <script>
+    $(function(){
+      $('section ul').masonry({
+        itemSelector: 'section ul li',
+        columnWidth: 240,
+        isFitWidth: true
+      });
     });
-  });
-</script>
+  </script>
+
+  <div id="fb-root"></div>
+  <script src="http://connect.facebook.net/en_US/all.js"></script>
+  <script>
+    FB.init({
+      appId  : '171452686256352',
+      status : true, // check login status
+      cookie : true, // enable cookies to allow the server to access the session
+      xfbml  : true, // parse XFBML
+      channelUrl  : 'javascripts/channel.html', // Custom channel URL
+      oauth : true // enables OAuth 2.0
+    });
+    FB.api('/studentdrivernyc/feed?access_token=2227470867|2.AQAtaHeVRiz9ceR-.3600.1314856800.0-1627382967|xK3ntkdcqYtgNv38A_peukG42Vk', function(response) {
+      $.each(response.data, function(key, value) {
+        console.log(value.message);
+      });
+    });
+  </script>
+</body>
 </html>

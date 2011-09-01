@@ -98,6 +98,7 @@ h1 a {
   aside { bottom: 0; }
   section {
     padding: 103px 0 43px 0;
+    padding: 103px 0 143px 0;
     max-width: 720px;
     position: relative;
     z-index: -1;
@@ -112,6 +113,7 @@ h1 a {
 @media (min-width: 966px) { section { max-width: 960px;} }
 @media (min-width: 1206px) { section { max-width: 1200px;} }
 @media (min-width: 1446px) { section { max-width: 1440px;} }
+@media (min-width: 1686px) { section { max-width: 1680px;} }
 
 /* =TRANSITIONS */
 
