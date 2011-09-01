@@ -149,9 +149,9 @@
       channelUrl  : 'javascripts/channel.html', // Custom channel URL
       oauth : true // enables OAuth 2.0
     });
-    FB.api('/studentdrivernyc/feed?access_token=2227470867|2.AQAtaHeVRiz9ceR-.3600.1314856800.0-1627382967|xK3ntkdcqYtgNv38A_peukG42Vk', function(response) {
+    FB.api('/platform/feed?access_token=202742129788977|2.AQCvdQQQydZmE4D6.3600.1314864000.0-1627382967|a5b7qH7dvYhaBtVXheD-QYncoU0', function(response) {
       $.each(response.data, function(key, value) {
-        console.log(value.message);
+        console.log(value.description);
       });
     });
   </script>
